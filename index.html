@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi página personal</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header h1 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        .inicio {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #eaf2ff;
+        }
+
+        .inicio h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .inicio p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #2563eb;
+            margin-bottom: 25px;
+        }
+
+        .sobre-mi p {
+            text-align: center;
+            line-height: 1.7;
+        }
+
+        .habilidades {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .habilidad {
+            background-color: white;
+            padding: 25px;
+            width: 180px;
+            text-align: center;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .habilidad h3 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .proyecto {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .proyecto h3 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+            .inicio h2 {
+                font-size: 30px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Enrique Ginez</h1>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#proyectos">Proyectos</a>
+        </nav>
+    </header>
+
+    <section class="inicio" id="inicio">
+        <h2>Hola, soy Enrique</h2>
+        <p>Estudiante de programación y apasionado por la tecnología.</p>
+    </section>
+
+    <section class="sobre-mi" id="sobre-mi">
+        <h2>Sobre mí</h2>
+
+        <p>
+            Soy estudiante de programación y me gusta aprender sobre
+            tecnología, desarrollo de software y páginas web.
+            Durante mis estudios he realizado diferentes proyectos
+            utilizando distintos lenguajes de programación.
+        </p>
+    </section>
+
+    <section id="habilidades">
+        <h2>Mis habilidades</h2>
+
+        <div class="habilidades">
+
+            <div class="habilidad">
+                <h3>HTML</h3>
+                <p>Páginas web</p>
+            </div>
+
+            <div class="habilidad">
+                <h3>CSS</h3>
+                <p>Diseño web</p>
+            </div>
+
+            <div class="habilidad">
+                <h3>Java</h3>
+                <p>Programación</p>
+            </div>
+
+            <div class="habilidad">
+                <h3>Android</h3>
+                <p>Aplicaciones móviles</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="proyectos">
+        <h2>Mis proyectos</h2>
+
+        <div class="proyecto">
+            <h3>DinoWiki</h3>
+            <p>
+                Página web realizada con HTML y CSS como proyecto
+                de maquetación responsiva.
+            </p>
+        </div>
+
+        <div class="proyecto">
+            <h3>Aplicaciones Android</h3>
+            <p>
+                Diferentes prácticas realizadas en Android Studio
+                utilizando Java y XML.
+            </p>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Enrique Ginez</p>
+    </footer>
+
+</body>
+</html>
