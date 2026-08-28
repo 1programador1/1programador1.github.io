@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum - Enrique Ginez Sandoval</title>
-    <!-- Cargamos FontAwesome para los íconos de contacto -->
+
+    <!-- FontAwesome para los íconos de contacto -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        /* Estilos generales */
+        /* =========================
+           ESTILOS GENERALES
+        ========================= */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #e5e5e5;
@@ -15,51 +19,65 @@
             padding: 20px;
             color: #333;
         }
+
         .hoja-cv {
             max-width: 850px;
             background: #fff;
             margin: auto;
             padding: 50px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* Encabezado */
+        /* =========================
+           ENCABEZADO
+        ========================= */
         .encabezado {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
+            gap: 20px;
         }
+
         .encabezado-izq {
             flex: 1;
         }
+
         .nombre-contenedor {
             display: flex;
             align-items: center;
             gap: 12px;
             margin-bottom: 10px;
         }
+
         .cuadro-azul {
             width: 22px;
             height: 35px;
-            background-color: #354b5e; /* Azul oscuro del diseño */
+            background-color: #354b5e;
+            flex-shrink: 0;
         }
+
         .nombre-contenedor h1 {
             margin: 0;
             font-size: 34px;
             font-weight: 600;
             color: #222;
         }
+
         .perfil-texto {
             font-size: 13px;
             line-height: 1.5;
             color: #444;
             max-width: 280px;
         }
+
+        /* =========================
+           FOTO DE PERFIL
+        ========================= */
         .encabezado-centro {
             flex: 0 0 140px;
             text-align: center;
         }
-        /* ESTILO DE LA FOTO CIRCULAR */
+
         .foto-perfil {
             width: 120px;
             height: 120px;
@@ -67,56 +85,86 @@
             object-fit: cover;
             border: 1px solid #ccc;
         }
+
+        /* =========================
+           CONTACTO
+        ========================= */
         .encabezado-der {
             flex: 1;
             text-align: right;
             font-size: 12px;
             line-height: 2;
         }
+
         .contacto-item {
             display: flex;
             justify-content: flex-end;
             align-items: center;
             gap: 8px;
         }
+
         .contacto-item i {
-            color: #e74c3c; /* Rojo del diseño */
+            color: #e74c3c;
             font-size: 14px;
             width: 15px;
             text-align: center;
         }
 
-        /* Línea separadora */
+        .contacto-item span {
+            color: #333;
+        }
+
+        .contacto-item a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .contacto-item a:hover {
+            color: #e74c3c;
+        }
+
+        /* =========================
+           LÍNEA SEPARADORA
+        ========================= */
         .linea-roja {
             border-top: 2px solid #e74c3c;
             margin: 25px 0;
         }
 
-        /* Contenido Principal (Columnas) */
+        /* =========================
+           CONTENIDO PRINCIPAL
+        ========================= */
         .contenido {
             display: flex;
             gap: 40px;
         }
+
         .columna-izq {
             flex: 1.8;
         }
+
         .columna-der {
             flex: 1;
         }
 
-        /* Títulos de sección */
+        /* =========================
+           TÍTULOS
+        ========================= */
         h2 {
             font-size: 20px;
             margin-bottom: 25px;
             color: #111;
         }
 
-        /* Ítems de Experiencia y Educación */
+        /* =========================
+           EXPERIENCIA Y EDUCACIÓN
+        ========================= */
         .item-timeline {
             display: flex;
             gap: 15px;
             margin-bottom: 30px;
         }
+
         .cuadro-rojo {
             width: 25px;
             height: 25px;
@@ -124,9 +172,11 @@
             flex-shrink: 0;
             margin-top: 3px;
         }
+
         .timeline-contenido {
             flex: 1;
         }
+
         .timeline-datos {
             display: flex;
             justify-content: space-between;
@@ -134,24 +184,29 @@
             color: #e74c3c;
             font-weight: bold;
             margin-bottom: 5px;
+            gap: 10px;
         }
+
         .timeline-contenido h3 {
             margin: 0;
             font-size: 16px;
             color: #111;
         }
+
         .timeline-contenido h4 {
             margin: 2px 0 8px 0;
             font-size: 14px;
             font-weight: normal;
             color: #555;
         }
+
         .logros-titulo {
             font-style: italic;
             color: #999;
             font-size: 11px;
             margin: 0 0 3px 0;
         }
+
         .timeline-contenido p {
             font-size: 12px;
             line-height: 1.4;
@@ -159,7 +214,9 @@
             margin: 0;
         }
 
-        /* Barras de Habilidades */
+        /* =========================
+           HABILIDADES
+        ========================= */
         .habilidad {
             display: flex;
             align-items: center;
@@ -167,11 +224,13 @@
             margin-bottom: 12px;
             gap: 10px;
         }
+
         .habilidad-nombre {
             font-size: 12px;
             text-align: right;
             width: 45%;
         }
+
         .barra-fondo {
             width: 55%;
             height: 10px;
@@ -179,188 +238,377 @@
             border: 1px solid #e74c3c;
             box-sizing: border-box;
         }
+
         .barra-progreso {
             height: 100%;
             background-color: #e74c3c;
         }
 
-        /* Otras secciones derecha */
+        /* =========================
+           SECCIONES EXTRA
+        ========================= */
         .seccion-extra {
             margin-top: 35px;
         }
+
         .seccion-extra h5 {
             margin: 0 0 3px 0;
             font-size: 13px;
             color: #222;
         }
+
         .seccion-extra p {
             font-size: 11px;
             line-height: 1.4;
             color: #444;
             margin: 0 0 15px 0;
         }
+
         .intereses {
             font-size: 12px;
             color: #444;
             line-height: 1.6;
         }
+
+        /* =========================
+           DISEÑO RESPONSIVO
+        ========================= */
+        @media (max-width: 750px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .hoja-cv {
+                padding: 25px;
+            }
+
+            .encabezado {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .encabezado-izq {
+                width: 100%;
+            }
+
+            .nombre-contenedor {
+                justify-content: center;
+            }
+
+            .perfil-texto {
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .encabezado-centro {
+                order: -1;
+            }
+
+            .encabezado-der {
+                width: 100%;
+                text-align: center;
+            }
+
+            .contacto-item {
+                justify-content: center;
+            }
+
+            .contenido {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .timeline-datos {
+                flex-direction: column;
+                gap: 2px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
 <div class="hoja-cv">
 
+    <!-- =========================
+         ENCABEZADO
+    ========================= -->
     <div class="encabezado">
+
         <div class="encabezado-izq">
+
             <div class="nombre-contenedor">
                 <div class="cuadro-azul"></div>
                 <h1>Enrique Ginez Sandoval</h1>
             </div>
+
             <p class="perfil-texto">
-                Estudiante con enfoque en desarrollo tecnológico. Buscando aplicar mis conocimientos en programación y resolución de problemas técnicos para crear soluciones eficientes e innovadoras.
+                Estudiante con enfoque en desarrollo tecnológico. Buscando aplicar
+                mis conocimientos en programación y resolución de problemas técnicos
+                para crear soluciones eficientes e innovadoras.
             </p>
+
         </div>
-        
+
+        <!-- FOTO -->
         <div class="encabezado-centro">
-            <!-- AQUÍ VA TU FOTO -->
-            <img src="mi_foto.jpg" alt="Foto de perfil" class="foto-perfil">
+            <img
+                src="mi_foto.jpg"
+                alt="Foto de perfil de Enrique Ginez Sandoval"
+                class="foto-perfil"
+            >
         </div>
-        
+
+        <!-- INFORMACIÓN DE CONTACTO -->
         <div class="encabezado-der">
+
             <div class="contacto-item">
-                sanenrique130@gmail.com<i class="fa-solid fa-envelope"></i>
+                <span>sanenrique130@gmail.com</span>
+                <i class="fa-solid fa-envelope"></i>
             </div>
+
             <div class="contacto-item">
-                272-261-3476<i class="fa-solid fa-phone"></i>
+                <span>272-261-3476</span>
+                <i class="fa-solid fa-phone"></i>
             </div>
+
             <div class="contacto-item">
-                Orizaba ver<i class="fa-solid fa-location-dot"></i>
+                <span>Orizaba, Veracruz</span>
+                <i class="fa-solid fa-location-dot"></i>
             </div>
+
             <div class="contacto-item">
-                1programador1 <i class="fa-brands fa-github"></i>
+                <a href="https://github.com/1programador1" target="_blank">
+                    1programador1
+                </a>
+                <i class="fa-brands fa-github"></i>
             </div>
+
         </div>
+
     </div>
 
     <div class="linea-roja"></div>
 
-    
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================= -->
     <div class="contenido">
-        
-        <!-- COLUMNA IZQUIERDA (Experiencia y Educación) -->
+
+        <!-- =========================
+             COLUMNA IZQUIERDA
+        ========================= -->
         <div class="columna-izq">
+
             <h2>Experiencia Práctica y Proyectos</h2>
-            
+
+            <!-- PROYECTO 1 -->
             <div class="item-timeline">
+
                 <div class="cuadro-rojo"></div>
+
                 <div class="timeline-contenido">
+
                     <div class="timeline-datos">
                         <span>03/2026 - Presente</span>
                         <span>Puebla, México</span>
                     </div>
+
                     <h3>Desarrollador de Apps (Proyecto Escolar)</h3>
+
                     <h4>Proyectos en Android Studio</h4>
+
                     <p class="logros-titulo">Logros</p>
-                    <p>Desarrollo de aplicaciones móviles utilizando Java y XML, implementando interfaces gráficas, adaptadores personalizados y listas interactivas.</p>
+
+                    <p>
+                        Desarrollo de aplicaciones móviles utilizando Java y XML,
+                        implementando interfaces gráficas, adaptadores personalizados
+                        y listas interactivas.
+                    </p>
+
                 </div>
+
             </div>
 
+
+            <!-- PROYECTO 2 -->
             <div class="item-timeline">
+
                 <div class="cuadro-rojo"></div>
+
                 <div class="timeline-contenido">
+
                     <div class="timeline-datos">
                         <span>04/2026 - 04/2026</span>
                         <span>Puebla, México</span>
                     </div>
+
                     <h3>Creador de Marcador Interactivo</h3>
+
                     <h4>Proyecto Práctico</h4>
+
                     <p class="logros-titulo">Logros</p>
-                    <p>Programación de una aplicación de marcador deportivo con botones para incrementar puntajes y función de reinicio, gestionando la lógica de botones en Java.</p>
+
+                    <p>
+                        Programación de una aplicación de marcador deportivo con
+                        botones para incrementar puntajes y función de reinicio,
+                        gestionando la lógica de botones en Java.
+                    </p>
+
                 </div>
+
             </div>
 
+
+            <!-- EDUCACIÓN -->
             <h2>Educación</h2>
-            
+
             <div class="item-timeline">
+
                 <div class="cuadro-rojo"></div>
+
                 <div class="timeline-contenido">
+
                     <div class="timeline-datos">
                         <span>2024 - Presente</span>
                         <span>Puebla, México</span>
                     </div>
+
                     <h3>Estudiante de Bachillerato</h3>
+
                     <h4>Institución Educativa</h4>
-                    <p>Cursando materias enfocadas en cálculo, álgebra, humanidades y desarrollo tecnológico.</p>
+
+                    <p>
+                        Cursando materias enfocadas en cálculo, álgebra,
+                        humanidades y desarrollo tecnológico.
+                    </p>
+
                 </div>
+
             </div>
+
         </div>
 
-        
+
+        <!-- =========================
+             COLUMNA DERECHA
+        ========================= -->
         <div class="columna-der">
+
             <h2>Habilidades</h2>
-            
-            
+
             <div class="habilidad">
-                <span class="habilidad-nombre">Desarrollo Android (Java)</span>
+                <span class="habilidad-nombre">
+                    Desarrollo Android (Java)
+                </span>
+
                 <div class="barra-fondo">
                     <div class="barra-progreso" style="width: 80%;"></div>
                 </div>
             </div>
-            
+
             <div class="habilidad">
-                <span class="habilidad-nombre">Diseño UI con XML</span>
+                <span class="habilidad-nombre">
+                    Diseño UI con XML
+                </span>
+
                 <div class="barra-fondo">
                     <div class="barra-progreso" style="width: 85%;"></div>
                 </div>
             </div>
-            
+
             <div class="habilidad">
-                <span class="habilidad-nombre">Resolución de Problemas</span>
+                <span class="habilidad-nombre">
+                    Resolución de Problemas
+                </span>
+
                 <div class="barra-fondo">
                     <div class="barra-progreso" style="width: 90%;"></div>
                 </div>
             </div>
-           
+
             <div class="habilidad">
-                <span class="habilidad-nombre">Trabajo en Equipo</span>
+                <span class="habilidad-nombre">
+                    Trabajo en Equipo
+                </span>
+
                 <div class="barra-fondo">
                     <div class="barra-progreso" style="width: 95%;"></div>
                 </div>
             </div>
-          
+
             <div class="habilidad">
-                <span class="habilidad-nombre">Creatividad / Diseño</span>
+                <span class="habilidad-nombre">
+                    Creatividad / Diseño
+                </span>
+
                 <div class="barra-fondo">
                     <div class="barra-progreso" style="width: 75%;"></div>
                 </div>
             </div>
 
+
+            <!-- CERTIFICADOS -->
             <div class="seccion-extra">
+
                 <h2>Certificados y Cursos</h2>
+
                 <h5>Curso o Certificación Ejemplo (2025)</h5>
-                <p>Descripción breve de algo que hayas aprendido o un reconocimiento que te hayan dado en la escuela.</p>
-                
-                <h5>Reconocimiento Ejemplo (2024)</h5>
-                <p>Mención honorífica o premio por algún proyecto destacado.</p>
-            </div>
 
-            <div class="seccion-extra">
-                <h2>Idiomas</h2>
-                <div style="display: flex; justify-content: space-between;">
-                    <p><strong>Español</strong> (Nativo)</p>
-                    <p><strong>Inglés</strong> (Intermedio)</p>
-                </div>
-            </div>
-
-            <div class="seccion-extra">
-                <h2>Intereses</h2>
-                <p class="intereses">
-                    Programación | Videojuegos | Construcción con LEGO | Cine y Series | Diseño floral | Música y Audio
+                <p>
+                    Descripción breve de algo que hayas aprendido o un
+                    reconocimiento que te hayan dado en la escuela.
                 </p>
+
+                <h5>Reconocimiento Ejemplo (2024)</h5>
+
+                <p>
+                    Mención honorífica o premio por algún proyecto destacado.
+                </p>
+
             </div>
+
+
+            <!-- IDIOMAS -->
+            <div class="seccion-extra">
+
+                <h2>Idiomas</h2>
+
+                <div style="display: flex; justify-content: space-between; gap: 10px;">
+
+                    <p>
+                        <strong>Español</strong> (Nativo)
+                    </p>
+
+                    <p>
+                        <strong>Inglés</strong> (Intermedio)
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- INTERESES -->
+            <div class="seccion-extra">
+
+                <h2>Intereses</h2>
+
+                <p class="intereses">
+                    Programación | Videojuegos | Construcción con LEGO |
+                    Cine y Series | Diseño floral | Música y Audio
+                </p>
+
+            </div>
+
         </div>
 
     </div>
+
 </div>
 
 </body>
